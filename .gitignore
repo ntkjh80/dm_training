@@ -1,0 +1,26 @@
+# Python and local environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+.DS_Store
+
+# Local credentials
+.env
+.env.*
+!.env.example
+
+# Training outputs and downloaded weights
+outputs/
+checkpoints/
+models/
+.cache/
+*.safetensors
+*.gguf
+*.pt
+*.pth
+*.bin
+
+# Store private datasets here; only the bundled synthetic examples are tracked
+private-data/
