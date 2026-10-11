@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1130" viewBox="0 0 1600 1130" role="img" aria-labelledby="title desc">
+<title id="title">RAG에 “답할 수 있는가” 판단을 더하기</title><desc id="desc">검색 → 근거 판단 → 생성 여부 결정 → 답변 작성의 역할을 나누어 봅니다.</desc>
+<rect width="1600" height="100%" fill="white"/>
+<text x="72" y="48" dominant-baseline="hanging" font-family="Apple SD Gothic Neo, Noto Sans CJK KR, Malgun Gothic, sans-serif" font-size="22" font-weight="700" fill="#245CD6">DECISION MODEL  /  한국어 실습 교재</text>
+<text x="72" y="92" dominant-baseline="hanging" font-family="Apple SD Gothic Neo, Noto Sans CJK KR, Malgun Gothic, sans-serif" font-size="46" font-weight="700" fill="#172B4D">RAG에 “답할 수 있는가” 판단을 더하기</text>
+<text x="72" y="158" dominant-baseline="hanging" font-family="Apple SD Gothic Neo, Noto Sans CJK KR, Malgun Gothic, sans-serif" font-size="26" font-weight="400" fill="#52657C">검색 → 근거 판단 → 생성 여부 결정 → 답변 작성의 역할을 나누어 봅니다.</text>
+<rect x="72" y="220" width="1456" height="80" rx="18" fill="#F3F6FA" stroke="none" stroke-width="2"/>
+<text x="98" y="245" dominant-baseline="hanging" font-family="Apple SD Gothic Neo, Noto Sans CJK KR, Malgun Gothic, sans-serif" font-size="30" font-weight="700" fill="#172B4D">공통 준비: 문서 분할 → 임베딩·키워드 색인 → 검색 가능한 문서 저장소</text>
+<text x="96" y="340" dominant-baseline="hanging" font-family="Apple SD Gothic Neo, Noto Sans CJK KR, Malgun Gothic, sans-serif" font-size="34" font-weight="700" fill="#245CD6">기본 RAG 흐름 예시</text>
+<text x="862" y="340" dominant-baseline="hanging" font-family="Apple SD Gothic Neo, Noto Sans CJK KR, Malgun Gothic, sans-serif" font-size="34" font-weight="700" fill="#147D70">Decision 판단을 추가한 RAG</text>
+<rect x="72" y="398" width="690" height="625" rx="18" fill="#FAFBFE" stroke="#DCE5F0" stroke-width="2"/>
+<rect x="838" y="398" width="690" height="625" rx="18" fill="#F8FCFA" stroke="#D3E9E1" stroke-width="2"/>
+<rect x="100" y="425" width="634" height="105" rx="18" fill="#EDF3FF" stroke="none" stroke-width="2"/>
+<text x="124" y="445" dominant-baseline="hanging" font-family="Apple SD Gothic Neo, Noto Sans CJK KR, Malgun Gothic, sans-serif" font-size="30" font-weight="700" fill="#245CD6">질문으로 후보 검색</text>
+<text x="124" y="487" dominant-baseline="hanging" font-family="Apple SD Gothic Neo, Noto Sans CJK KR, Malgun Gothic, sans-serif" font-size="23" font-weight="400" fill="#52657C">벡터·키워드 검색으로 top-k 후보 확보</text>
+<polyline points="417,532 417,559" fill="none" stroke="#245CD6" stroke-width="3"/>
+<polygon points="417,559 410.99687071796075,547.4690660038693 423.00312928203925,547.4690660038693" fill="#245CD6"/>
+<rect x="100" y="565" width="634" height="105" rx="18" fill="#EDF3FF" stroke="none" stroke-width="2"/>
+<text x="124" y="585" dominant-baseline="hanging" font-family="Apple SD Gothic Neo, Noto Sans CJK KR, Malgun Gothic, sans-serif" font-size="30" font-weight="700" fill="#245CD6">선택적으로 재정렬</text>
+<text x="124" y="627" dominant-baseline="hanging" font-family="Apple SD Gothic Neo, Noto Sans CJK KR, Malgun Gothic, sans-serif" font-size="23" font-weight="400" fill="#52657C">reranker가 질문과 문서를 비교</text>
+<polyline points="417,672 417,699" fill="none" stroke="#245CD6" stroke-width="3"/>
+<polygon points="417,699 410.99687071796075,687.4690660038693 423.00312928203925,687.4690660038693" fill="#245CD6"/>
+<rect x="100" y="705" width="634" height="105" rx="18" fill="#EDF3FF" stroke="none" stroke-width="2"/>
+<text x="124" y="725" dominant-baseline="hanging" font-family="Apple SD Gothic Neo, Noto Sans CJK KR, Malgun Gothic, sans-serif" font-size="30" font-weight="700" fill="#245CD6">선택한 문서를 문맥에 넣기</text>
+<text x="124" y="767" dominant-baseline="hanging" font-family="Apple SD Gothic Neo, Noto Sans CJK KR, Malgun Gothic, sans-serif" font-size="23" font-weight="400" fill="#52657C">검색 순위만으로 근거 충분성이 확정되지는 않음</text>
+<polyline points="417,812 417,839" fill="none" stroke="#245CD6" stroke-width="3"/>
+<polygon points="417,839 410.99687071796075,827.4690660038693 423.00312928203925,827.4690660038693" fill="#245CD6"/>
+<rect x="100" y="845" width="634" height="105" rx="18" fill="#EDF3FF" stroke="none" stroke-width="2"/>
+<text x="124" y="865" dominant-baseline="hanging" font-family="Apple SD Gothic Neo, Noto Sans CJK KR, Malgun Gothic, sans-serif" font-size="30" font-weight="700" fill="#245CD6">LLM이 답변 작성</text>
+<text x="124" y="907" dominant-baseline="hanging" font-family="Apple SD Gothic Neo, Noto Sans CJK KR, Malgun Gothic, sans-serif" font-size="23" font-weight="400" fill="#52657C">실제 RAG는 별도 검증·보류 절차도 추가 가능</text>
+<rect x="866" y="425" width="634" height="105" rx="18" fill="#EAF7F3" stroke="none" stroke-width="2"/>
+<text x="890" y="445" dominant-baseline="hanging" font-family="Apple SD Gothic Neo, Noto Sans CJK KR, Malgun Gothic, sans-serif" font-size="30" font-weight="700" fill="#147D70">질문으로 후보 검색</text>
+<text x="890" y="487" dominant-baseline="hanging" font-family="Apple SD Gothic Neo, Noto Sans CJK KR, Malgun Gothic, sans-serif" font-size="23" font-weight="400" fill="#52657C">기존 검색기를 그대로 사용할 수 있음</text>
+<polyline points="1183,532 1183,545" fill="none" stroke="#147D70" stroke-width="3"/>
+<polygon points="1183,545 1176.9968707179607,533.4690660038693 1189.0031292820393,533.4690660038693" fill="#147D70"/>
+<rect x="866" y="552" width="634" height="105" rx="18" fill="#EAF7F3" stroke="none" stroke-width="2"/>
+<text x="890" y="572" dominant-baseline="hanging" font-family="Apple SD Gothic Neo, Noto Sans CJK KR, Malgun Gothic, sans-serif" font-size="30" font-weight="700" fill="#147D70">문서별 근거 확률 평가</text>
+<text x="890" y="614" dominant-baseline="hanging" font-family="Apple SD Gothic Neo, Noto Sans CJK KR, Malgun Gothic, sans-serif" font-size="23" font-weight="400" fill="#52657C">각 후보가 질문에 도움이 되는지 판단</text>
+<polyline points="1183,659 1183,672" fill="none" stroke="#147D70" stroke-width="3"/>
+<polygon points="1183,672 1176.9968707179607,660.4690660038693 1189.0031292820393,660.4690660038693" fill="#147D70"/>
+<rect x="866" y="679" width="634" height="105" rx="18" fill="#EAF7F3" stroke="none" stroke-width="2"/>
+<text x="890" y="699" dominant-baseline="hanging" font-family="Apple SD Gothic Neo, Noto Sans CJK KR, Malgun Gothic, sans-serif" font-size="30" font-weight="700" fill="#147D70">코드로 필터링 → 남은 근거 재평가</text>
+<text x="890" y="741" dominant-baseline="hanging" font-family="Apple SD Gothic Neo, Noto Sans CJK KR, Malgun Gothic, sans-serif" font-size="23" font-weight="400" fill="#52657C">관련성 기준 적용 후 전체 답변 가능성 확인</text>
+<polyline points="1183,790 1183,824 1025,824 1025,857" fill="none" stroke="#147D70" stroke-width="3"/>
+<polygon points="1025,857 1018.9968707179607,845.4690660038693 1031.0031292820393,845.4690660038693" fill="#147D70"/>
+<polyline points="1183,824 1350,824 1350,857" fill="none" stroke="#A95D11" stroke-width="3"/>
+<polygon points="1350,857 1343.9968707179607,845.4690660038693 1356.0031292820393,845.4690660038693" fill="#A95D11"/>
+<rect x="866" y="864" width="308" height="115" rx="18" fill="#EAF7F3" stroke="none" stroke-width="2"/>
+<text x="890" y="884" dominant-baseline="hanging" font-family="Apple SD Gothic Neo, Noto Sans CJK KR, Malgun Gothic, sans-serif" font-size="30" font-weight="700" fill="#147D70">충분: 생성 진행</text>
+<text x="890" y="926" dominant-baseline="hanging" font-family="Apple SD Gothic Neo, Noto Sans CJK KR, Malgun Gothic, sans-serif" font-size="23" font-weight="400" fill="#52657C">선별한 근거를 LLM에 전달</text>
+<rect x="1194" y="864" width="306" height="115" rx="18" fill="#FFF4E5" stroke="none" stroke-width="2"/>
+<text x="1218" y="884" dominant-baseline="hanging" font-family="Apple SD Gothic Neo, Noto Sans CJK KR, Malgun Gothic, sans-serif" font-size="30" font-weight="700" fill="#A95D11">부족: 답변 보류</text>
+<text x="1218" y="926" dominant-baseline="hanging" font-family="Apple SD Gothic Neo, Noto Sans CJK KR, Malgun Gothic, sans-serif" font-size="23" font-weight="400" fill="#52657C">추가 검색·확인으로 연결</text>
+<text x="72" y="1080" dominant-baseline="hanging" font-family="Apple SD Gothic Neo, Noto Sans CJK KR, Malgun Gothic, sans-serif" font-size="21" font-weight="400" fill="#52657C">원문 개념: Avi Chawla, 2026-10-07 · 한국어 자체 도식 · 응용 실습은 두 번의 순차 판단 사용</text>
+</svg>

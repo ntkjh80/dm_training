@@ -8,6 +8,10 @@
 | 일반 LLM 대화 | 다음 단어를 생성해 응답 작성 | 설명문, 요약문, 답변 초안 |
 | Decision 모델 | 입력과 선택지를 비교해 점수 계산 | 담당 팀 배정, 태그, 단계 분류 |
 
+![Unsloth Decision 모델의 입력, 판단, 코드 처리 흐름](../assets/diagrams/decision-workflow.png)
+
+*이 교재의 Unsloth 학습 경로를 설명한 자체 도식입니다. 모델과 실행 규칙의 역할을 구분합니다. [SVG 원본](../assets/diagrams/decision-workflow.svg)*
+
 ## 입력부터 결과까지
 
 **문서와 질문과 선택지 → 언어 모델의 문맥 이해 → Decision head의 선택지 점수 → 확률 보정 → 프로그램의 처리 규칙**
@@ -29,6 +33,12 @@ choice는 질문 하나에서 한 선택지를 고릅니다. 여러 태그를 �
 이름에 decision이 들어가지만 이 실습은 정답 예제를 사용하는 지도학습입니다. 보상을 주며 행동을 탐색하는 강화학습이나 업무 전체를 수행하는 에이전트와는 학습 목표가 다릅니다.
 
 근거: [11. 정답과 확률 처리 구현](https://github.com/unslothai/unsloth/blob/main/unsloth/models/_decision_common.py)
+
+## 고객 문의 분류에서 RAG 근거 평가로
+
+같은 질문 형태를 문서 검색에도 적용할 수 있습니다. `state`에 사용자 질문과 검색 문서를 넣고, 문서마다 `noul`로 “답할 근거가 되는가?”를 묻습니다. 코드가 기준을 적용한 뒤 남은 근거를 다시 평가합니다. 전체 예제는 [15장](15-rag-decision-gates.md)에 있습니다.
+
+Decision 모델을 만든다는 말은 여러 구현을 가리킬 수 있습니다. 이 교재의 Unsloth 경로는 head와 추가 가중치를 학습합니다. 반면 원문에 연결된 로컬 구현은 기존 LLM의 선택지 토큰 점수를 읽는 추론 방식입니다. 학습 여부와 보정 여부를 구분하는 비교는 [15장의 구현 방식 설명](15-rag-decision-gates.md)을 참고하세요.
 
 ---
 

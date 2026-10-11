@@ -1,14 +1,24 @@
 # Unsloth Decision 모델 만들기
 
-한국어로 배우는 Decision 모델 교육 저장소입니다. 개념, PC 환경별 준비, 내 데이터로 학습하기, 모델 저장과 평가까지 다룹니다. 모든 교재와 진행 대본은 Markdown이며 실습 코드는 Python입니다.
+한국어로 배우는 Decision 모델 교육 저장소입니다. 개념, PC 환경별 준비, 내 데이터로 학습하기, 모델 저장과 평가, RAG의 근거 판단까지 다룹니다. 모든 교재와 진행 대본은 Markdown이며 실습 코드는 Python입니다.
 
 원문: [Train your own Decision Model with Unsloth](https://unsloth.ai/docs/basics/train-your-own-decision-model-with-unsloth) · 자료 기준일: **2026-10-11**
+
+## 그림으로 보는 RAG 응용
+
+![기본 RAG와 Decision 판단을 추가한 RAG 비교](assets/diagrams/rag-comparison.png)
+
+[Avi Chawla의 X 글](https://x.com/_avichawla/status/2107767245917368751)을 바탕으로 RAG 응용 2개 장과 한국어 도식 4장을 추가했습니다. 그림의 역할 구분, 한국어 예제, 두 단계 판단 실습은 이 교재에 맞게 구성했습니다.
+
+- [15장: RAG에 Decision 모델 연결](docs/15-rag-decision-gates.md): 검색 순위·관련성·답변 가능성 구분.
+- [16장: 내 PC 실습](docs/16-rag-practice.md): GPU 없는 모의 실행과 로컬 Unsloth API 판단.
+- [그림 모음과 편집 원본](assets/README.md): PNG 4장과 SVG 4개.
 
 ## 먼저 읽을 자료
 
 - 처음 배우는 분: [01. 시작하기](docs/01-introduction.md)부터 순서대로 읽습니다.
 - 바로 실행할 분: [실습 시작 안내](practice/README.md)에서 데이터 점검과 환경 준비를 진행합니다.
-- 수업 진행자: [60분 강의 대본과 추가 30분 실습](docs/teaching-script.md)을 사용합니다.
+- 수업 진행자: [60분 강의 대본·추가 30분 실습·선택 RAG 20분](docs/teaching-script.md)을 사용합니다.
 - Git으로 수정 이력을 남길 분: [Git 사용 안내](docs/git-workflow.md)를 봅니다.
 
 ## 내 PC에 맞는 길
@@ -45,6 +55,8 @@
 | 12 | [오류 해결과 성능 개선](docs/12-troubleshooting.md) |
 | 13 | [완료 확인과 다음 계획](docs/13-completion-checklist.md) |
 | 14 | [출처와 변경 확인](docs/14-sources.md) |
+| 15 | [Decision 모델을 RAG에 연결하기](docs/15-rag-decision-gates.md) |
+| 16 | [내 PC에서 RAG 판단 흐름 실습하기](docs/16-rag-practice.md) |
 
 ## 설치 없이 데이터부터 점검하기
 
@@ -67,6 +79,18 @@ python predict_saved.py outputs/course/adapter
 
 두 학습은 각각 기반 모델에서 새로 시작합니다. 5 step은 작동 점검용입니다. 전체 설치 조건과 옵션은 [실습 시작 안내](practice/README.md)를 따르세요.
 
+## GPU 없이 RAG 판단 흐름 체험
+
+저장소 최상위에서 실행합니다. 기본값은 고정된 예시 확률을 사용하는 `mock` 모드입니다.
+
+```bash
+python practice/rag_gate_demo.py
+python practice/rag_gate_demo.py --scenario missing
+python -m unittest discover -s tests -v
+```
+
+실제 검색이나 답변 생성은 수행하지 않습니다. API 모드로 실제 모델 판단을 받는 방법과 검증 범위는 [16장](docs/16-rag-practice.md)을 따르세요.
+
 ## 폴더 구성
 
 ```text
@@ -75,14 +99,20 @@ DM_training/
 ├── .gitignore
 ├── .gitattributes
 ├── docs/
-│   ├── 01-introduction.md ... 14-sources.md
+│   ├── 01-introduction.md ... 16-rag-practice.md
 │   ├── teaching-script.md
 │   └── git-workflow.md
+├── assets/
+│   ├── README.md
+│   └── diagrams/  # 한국어 도식 PNG + SVG
+├── tests/
+│   └── test_rag_gate.py
 └── practice/
     ├── README.md
     ├── train_decision.py
     ├── predict_saved.py
     ├── call_api.py
+    ├── rag_gate_demo.py
     ├── prepare_data.py
     ├── request.json
     └── data/
@@ -93,7 +123,7 @@ DM_training/
 
 ## 확인 범위와 기록
 
-자료 제작 과정에서 코드 문법, 예제 데이터 형식, 정답 변환 규칙, 잘못된 자료 거부, 모의 API 호출을 점검했습니다. Markdown 전환 후 문서 연결과 데이터 점검도 통과했습니다. 실제 모델 다운로드, CUDA/MLX 학습, 실제 Unsloth API 추론, 모든 OS에서의 설치 검증은 수행하지 않았습니다.
+자료 제작 과정에서 코드 문법, 예제 데이터 형식, 정답 변환 규칙, 잘못된 자료 거부, 모의 API 호출을 점검했습니다. Markdown 문서 연결과 데이터 점검을 통과했습니다. RAG 보강에서는 모의 시나리오, 두 단계 판단의 동작 검사, 그림의 한글 표시를 확인했습니다. 실제 모델 다운로드, CUDA/MLX 학습, 실제 Unsloth API 추론, 모든 OS에서의 설치 검증은 수행하지 않았습니다.
 
 교재 성능표는 공식 문서의 보고값입니다. 동봉 소량 가상 데이터의 점수는 실무 정확도를 입증하지 않습니다. 학습할 때는 `metrics.json`과 `environment.txt`에 실제 환경과 결과를 남깁니다.
 

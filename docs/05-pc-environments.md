@@ -1,5 +1,11 @@
 # 05. 내 PC에 맞는 경로 선택
 
+![PC 유형별 모의 실습, 로컬 추론, 추가 학습 경로](../assets/diagrams/pc-learning-paths.png)
+
+*교육용 경로 안내입니다. 세부 지원 조건은 아래 표와 공식 설치 문서를 확인합니다. [SVG 원본](../assets/diagrams/pc-learning-paths.svg)*
+
+GPU가 없어도 [16장의 RAG 모의 실습](16-rag-practice.md)은 Python만으로 실행할 수 있습니다. 이 단계는 학습이나 실제 모델 추론이 아닌 코드 흐름 체험입니다.
+
 | PC 환경 | 처음 할 일 | 내 데이터 학습 경로 |
 | --- | --- | --- |
 | Windows 또는 Linux와 NVIDIA GPU | Desktop 설치 후 작은 모델로 점검 | Studio 또는 CUDA 코드 실습 |

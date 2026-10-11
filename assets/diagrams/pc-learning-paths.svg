@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1060" viewBox="0 0 1600 1060" role="img" aria-labelledby="title desc">
+<title id="title">내 PC에서 시작하는 세 단계</title><desc id="desc">모든 PC에서 흐름 체험부터 시작하고, 실제 추론과 추가 학습을 순서대로 선택하세요.</desc>
+<rect width="1600" height="100%" fill="white"/>
+<text x="72" y="48" dominant-baseline="hanging" font-family="Apple SD Gothic Neo, Noto Sans CJK KR, Malgun Gothic, sans-serif" font-size="22" font-weight="700" fill="#245CD6">DECISION MODEL  /  한국어 실습 교재</text>
+<text x="72" y="92" dominant-baseline="hanging" font-family="Apple SD Gothic Neo, Noto Sans CJK KR, Malgun Gothic, sans-serif" font-size="46" font-weight="700" fill="#172B4D">내 PC에서 시작하는 세 단계</text>
+<text x="72" y="158" dominant-baseline="hanging" font-family="Apple SD Gothic Neo, Noto Sans CJK KR, Malgun Gothic, sans-serif" font-size="26" font-weight="400" fill="#52657C">모든 PC에서 흐름 체험부터 시작하고, 실제 추론과 추가 학습을 순서대로 선택하세요.</text>
+<rect x="72" y="220" width="1456" height="92" rx="18" fill="#EDF3FF" stroke="none" stroke-width="2"/>
+<text x="98" y="242" dominant-baseline="hanging" font-family="Apple SD Gothic Neo, Noto Sans CJK KR, Malgun Gothic, sans-serif" font-size="32" font-weight="700" fill="#245CD6">공통 첫걸음: Python으로 데이터 검사 + RAG 모의 실습</text>
+<text x="98" y="280" dominant-baseline="hanging" font-family="Apple SD Gothic Neo, Noto Sans CJK KR, Malgun Gothic, sans-serif" font-size="24" font-weight="400" fill="#52657C">모델 다운로드·GPU·API 키 없이 분기 흐름을 확인합니다.</text>
+<text x="96" y="360" dominant-baseline="hanging" font-family="Apple SD Gothic Neo, Noto Sans CJK KR, Malgun Gothic, sans-serif" font-size="28" font-weight="700" fill="#172B4D">PC 환경</text>
+<text x="530" y="360" dominant-baseline="hanging" font-family="Apple SD Gothic Neo, Noto Sans CJK KR, Malgun Gothic, sans-serif" font-size="28" font-weight="700" fill="#172B4D">실제 모델로 판단하기</text>
+<text x="1080" y="360" dominant-baseline="hanging" font-family="Apple SD Gothic Neo, Noto Sans CJK KR, Malgun Gothic, sans-serif" font-size="28" font-weight="700" fill="#172B4D">내 데이터로 추가 학습</text>
+<rect x="72" y="410" width="1456" height="110" rx="18" fill="#F3F6FA" stroke="none" stroke-width="2"/>
+<text x="96" y="431" dominant-baseline="hanging" font-family="Apple SD Gothic Neo, Noto Sans CJK KR, Malgun Gothic, sans-serif" font-size="29" font-weight="700" fill="#172B4D">Windows / Linux</text>
+<text x="96" y="474" dominant-baseline="hanging" font-family="Apple SD Gothic Neo, Noto Sans CJK KR, Malgun Gothic, sans-serif" font-size="23" font-weight="400" fill="#52657C">NVIDIA GPU</text>
+<text x="530" y="447" dominant-baseline="hanging" font-family="Apple SD Gothic Neo, Noto Sans CJK KR, Malgun Gothic, sans-serif" font-size="28" font-weight="700" fill="#147D70">Laya 또는 학습한 Decision 모델</text>
+<text x="1080" y="447" dominant-baseline="hanging" font-family="Apple SD Gothic Neo, Noto Sans CJK KR, Malgun Gothic, sans-serif" font-size="28" font-weight="700" fill="#245CD6">CUDA의 Studio / Python</text>
+<rect x="72" y="538" width="1456" height="110" rx="18" fill="#FFFFFF" stroke="none" stroke-width="2"/>
+<text x="96" y="559" dominant-baseline="hanging" font-family="Apple SD Gothic Neo, Noto Sans CJK KR, Malgun Gothic, sans-serif" font-size="29" font-weight="700" fill="#172B4D">Apple Silicon Mac</text>
+<text x="96" y="602" dominant-baseline="hanging" font-family="Apple SD Gothic Neo, Noto Sans CJK KR, Malgun Gothic, sans-serif" font-size="23" font-weight="400" fill="#52657C">M 시리즈</text>
+<text x="530" y="575" dominant-baseline="hanging" font-family="Apple SD Gothic Neo, Noto Sans CJK KR, Malgun Gothic, sans-serif" font-size="28" font-weight="700" fill="#147D70">Laya 또는 지원 MLX 모델</text>
+<text x="1080" y="575" dominant-baseline="hanging" font-family="Apple SD Gothic Neo, Noto Sans CJK KR, Malgun Gothic, sans-serif" font-size="28" font-weight="700" fill="#245CD6">최신 MLX 학습 경로</text>
+<rect x="72" y="666" width="1456" height="110" rx="18" fill="#F3F6FA" stroke="none" stroke-width="2"/>
+<text x="96" y="687" dominant-baseline="hanging" font-family="Apple SD Gothic Neo, Noto Sans CJK KR, Malgun Gothic, sans-serif" font-size="29" font-weight="700" fill="#172B4D">AMD / Intel GPU</text>
+<text x="96" y="730" dominant-baseline="hanging" font-family="Apple SD Gothic Neo, Noto Sans CJK KR, Malgun Gothic, sans-serif" font-size="23" font-weight="400" fill="#52657C">지원 GPU·OS 확인</text>
+<text x="530" y="703" dominant-baseline="hanging" font-family="Apple SD Gothic Neo, Noto Sans CJK KR, Malgun Gothic, sans-serif" font-size="28" font-weight="700" fill="#147D70">Laya로 먼저 체험</text>
+<text x="1080" y="703" dominant-baseline="hanging" font-family="Apple SD Gothic Neo, Noto Sans CJK KR, Malgun Gothic, sans-serif" font-size="28" font-weight="700" fill="#245CD6">벤더별 Studio 소량 검증</text>
+<rect x="72" y="794" width="1456" height="110" rx="18" fill="#FFFFFF" stroke="none" stroke-width="2"/>
+<text x="96" y="815" dominant-baseline="hanging" font-family="Apple SD Gothic Neo, Noto Sans CJK KR, Malgun Gothic, sans-serif" font-size="29" font-weight="700" fill="#172B4D">GPU 없는 PC / Intel Mac</text>
+<text x="96" y="858" dominant-baseline="hanging" font-family="Apple SD Gothic Neo, Noto Sans CJK KR, Malgun Gothic, sans-serif" font-size="23" font-weight="400" fill="#52657C">CPU 환경</text>
+<text x="530" y="831" dominant-baseline="hanging" font-family="Apple SD Gothic Neo, Noto Sans CJK KR, Malgun Gothic, sans-serif" font-size="28" font-weight="700" fill="#147D70">Laya 로컬 추론부터</text>
+<text x="1080" y="831" dominant-baseline="hanging" font-family="Apple SD Gothic Neo, Noto Sans CJK KR, Malgun Gothic, sans-serif" font-size="28" font-weight="700" fill="#245CD6">Colab GPU 학습부터 권장</text>
+<text x="96" y="947" dominant-baseline="hanging" font-family="Apple SD Gothic Neo, Noto Sans CJK KR, Malgun Gothic, sans-serif" font-size="27" font-weight="400" fill="#52657C">Colab은 원격 학습입니다. 저장한 모델의 로컬 실행 지원은 별도로 확인합니다.</text>
+<text x="72" y="1010" dominant-baseline="hanging" font-family="Apple SD Gothic Neo, Noto Sans CJK KR, Malgun Gothic, sans-serif" font-size="21" font-weight="400" fill="#52657C">교재 5·6·16장과 함께 읽기 · 세부 모델·메모리·설치 조건은 공식 환경별 안내 확인</text>
+</svg>

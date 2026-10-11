@@ -222,7 +222,19 @@ Colab의 무료 GPU 종류와 사용 시간은 보장되지 않습니다. 브라
 
 다운로드한 모델이 모든 CPU PC에서 바로 실행되는 것은 아닙니다. 해당 기반 모델과 head를 지원하는 실행 환경이 필요합니다. CPU의 Laya 체험과 학습한 모델의 GPU 서빙 조건을 구분합니다.
 
-## 10. 검증 범위와 오류 해결
+## 10. RAG 판단 흐름으로 확장
+
+GPU나 외부 패키지 없이 두 단계 판단을 체험합니다. 현재 `practice` 폴더에서 실행합니다.
+
+```bash
+python rag_gate_demo.py
+python rag_gate_demo.py --scenario missing
+python rag_gate_demo.py --relevance-threshold 0.90
+```
+
+기본 `mock` 모드는 예시 확률을 사용합니다. 실제 모델 판단을 받으려면 로컬 API를 준비한 뒤 `python rag_gate_demo.py --mode api`를 실행합니다. 두 모드 모두 실제 검색기나 생성기를 실행하지 않습니다. 설정, 결과 해석, 검증 범위는 [16장](../docs/16-rag-practice.md)에 있습니다.
+
+## 11. 검증 범위와 오류 해결
 
 자료 제작 과정에서 Python 문법, 예제 데이터 형식, 공식 gold 변환 규칙과 예제 대조, 잘못된 자료 거부, 모의 API 호출을 점검했습니다. Markdown 전환 후 문서 링크, 파일 구성, 데이터 점검도 통과했습니다.
 
